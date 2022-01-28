@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="style.css" rel="stylesheet">
+
+    <title>Login page</title>
+</head>
+<script>
+    function showPassword(){
+        
+        document.getElementById("open").style.display = "inline";
+        document.getElementById("close").style.display = "none";
+        document.getElementById('pass').setAttribute("type","text");
+
+    }
+    function hidePassword(){
+        
+        document.getElementById("close").style.display = "inline";
+        document.getElementById("open").style.display = "none";
+        document.getElementById('pass').setAttribute("type","password");
+
+    }
+
+    function validate(){
+        var uname = document.getElementById("uname").value;
+        var pass = document.getElementById("pass").value;
+
+    //check empty empty username field
+    if(uname == "") {
+      document.getElementById("blankMsg").innerHTML = "This field is requird.";
+      
+    }
+    //character data validation
+    else if(!isNaN(uname)){
+      document.getElementById("blankMsg").innerHTML = "*Only characters are allowed";
+      
+    }
+    else{
+        document.getElementById("blankMsg").innerHTML = "";
+    }
+
+     //check empty password field
+     if(pass == "") {
+      document.getElementById("message").innerHTML = "This field is required.";
+      
+    }
+      //minimum password length validation
+      else if(pass.length < 8) {
+      document.getElementById("message").innerHTML = "Password length must be atleast 8 characters";
+      
+    }
+
+    //maximum length of password validation
+    else if(pass.length > 15) {
+      document.getElementById("message").innerHTML = "Password length must not exceed 15 characters";
+     
+    }
+    else{
+        document.getElementById("message").innerHTML = "";
+    }
+    
+
+    }
+</script>
+<body>
+    <div class="back">
+        <img class="logo" src="images/logo.png" alt="">
+     </div>
+    
+     <div class="box">
+         <h4>Login</h4>
+         <div class="uname-div">
+            <input type="text" placeholder="Username" id="uname" name ="uname" required> 
+            <p id="blankMsg"></p>
+         </div>
+        
+         <div class="pass-div">
+             <div class="pass-icon">
+                    <input type="password" placeholder="Password" id="pass" name="psw" required>
+            <i class="fa fa-eye-slash icon" id="close" onclick = "showPassword()" aria-hidden="true"></i>
+
+            <i class="fa fa-eye icon" id="open" onclick="hidePassword()" aria-hidden="true"></i>
+             </div>
+            
+            <p id="message"></p>
+        </div>
+         <p class="psw"><a href="">Forgot password?</a></p>
+        <button type="submit" onclick="validate()">Login</button>
+
+     </div>
+    
+</body>
+</html>

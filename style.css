@@ -1,0 +1,92 @@
+.back{
+    background-color: #4492CF;
+    height: 50vh;
+    text-align: center;
+}
+.logo{
+    width: 300px;
+    margin-top:25px;
+}
+.box{
+    position:absolute;
+    width: 350px;
+    /* height: 350px; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); */
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border:none;
+    background: rgba(196, 196, 196, 0.24);
+    border-radius: 5px;   
+  }
+  input[type=password]{
+    /* margin-bottom: 5px; */
+  }
+   input:focus{
+     outline: none;
+     border: 1px solid #4492CF;
+  }
+  .box h4{
+      color: rgb(8, 5, 5);
+      margin-top: 5px;
+      font-size: 24px;
+      margin-bottom: 30px;
+  }
+  .psw{
+      color: #0f7dd1;
+      font-size: 12px;
+      float: right;
+      margin-bottom:20px;
+      
+  }
+  button{
+      border: none;
+      background: #227BC1;
+      width: 100%;
+      border-radius: 5px;
+      height: 40px;
+      font-weight: bold;
+      color: white;
+            
+  }
+  .icon{
+      position:absolute;
+      top: 50%;
+      left: 90%;  
+      transform: translateY(-50%);
+    }
+
+  
+  .pass-icon{
+      position: relative;
+  }
+  .uname-div{
+      margin-bottom: 25px;
+  }
+  #blankMsg{
+      color: rgba(230, 11, 11, 0.932);
+      text-align: left;
+      font-size: 12px;
+      margin-top: 5px;
+  }
+  #message{
+      color: rgba(230, 11, 11, 0.932);
+      text-align: left;
+      font-size: 12px;
+      margin-top: 5px;
+  }
+  #open{
+      display: none;
+  }
